@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style type="text/css">
         body { background: rgb(210, 210, 244) !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
     </style>
@@ -14,11 +15,12 @@
     
     <title>TO-DO Maker</title>
 </head>
+
 <body>
     <div>
-        <nav class="navbar navbar-dark bg-primary">
+        <nav class="navbar navbar-light bg-primary">
             <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1"><h1>TO-DO Maker</h1></span>
+            <span class="navbar-brand mb-0 h1">TO-DO Maker</span>
             </div>
         </nav>
     </div><br>
@@ -37,9 +39,9 @@
 
     <div class="container">
         {% for todo in todo_list %}
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card border-dark mb-3 h-100" style="width: 18rem;">
+        <div class="float-start">
+            <div style="margin-right: 5em;">
+                <div class="card text-bg-secondary mb-3" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{ todo.title }}</h5>
                         {% if todo.complete == False %}
